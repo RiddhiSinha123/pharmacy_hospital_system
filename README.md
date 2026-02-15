@@ -110,48 +110,81 @@ PUT /api/medicine/sell/1?qty=5
 ⚠️ Low Stock Medicines
 GET /api/medicine/low-stock?threshold=10
 
-Future Enhancements
+## 🔮 Future Enhancements
 
-User authentication (Admin / Pharmacist roles)
+The current version focuses on basic medicine inventory management.  
+The following improvements are planned for future releases:
 
-Expiry alerts
+### 🔐 Authentication & Authorization
+- Role-based access (Admin, Pharmacist)
+- Secure login using Spring Security
+- JWT-based authentication
+- Password encryption using BCrypt
 
-Pagination & filtering
+---
 
-Invoice generation
+### 📦 Advanced Inventory Management
+- Expiry date alerts (automatic detection of near-expiry medicines)
+- Automatic low-stock email notifications
+- Batch management for medicines
+- Supplier management module
+- Purchase history tracking
 
-Dashboard with analytics
+---
 
-Unit & Integration testing
+### 📊 Dashboard & Analytics
+- Real-time stock dashboard
+- Monthly sales reports
+- Most sold medicines report
+- Graph-based analytics using charts
+- Revenue tracking
 
-Docker containerization
+---
 
-🚀 Future DevOps Plan – Blue-Green Deployment
+### 🧾 Billing & Invoice System
+- Generate digital invoices (PDF)
+- Store billing history
+- GST/tax calculation support
+- Customer purchase history
 
-In future versions, this project will implement Blue-Green Deployment strategy for zero-downtime releases.
+---
 
-Planned Architecture:
+### 🔎 Search & Filtering
+- Search medicine by name
+- Filter by expiry date
+- Filter by stock availability
+- Pagination for large datasets
 
-Dockerized Spring Boot application
+---
 
-Two identical environments:
+### 🧪 Testing & Code Quality
+- Unit testing using JUnit
+- Integration testing
+- API testing automation
+- Code coverage reports
 
-🔵 Blue (Current Live Version)
+---
 
-🟢 Green (New Version)
+### 🐳 Docker & Containerization
+- Dockerize the Spring Boot application
+- Docker Compose for MySQL + Backend
+- Environment-based configuration
 
-Load balancer to switch traffic
+---
 
-Deployment via:
+### 🚀 CI/CD & Blue-Green Deployment
+- CI/CD pipeline using GitHub Actions
+- Automated build and test on every push
+- Blue-Green Deployment strategy:
+  - Two identical environments (Blue & Green)
+  - Load balancer-based traffic switching
+  - Zero-downtime production deployment
+  - Instant rollback capability
+- Kubernetes-based deployment in future
 
-Docker Compose / Kubernetes
+---
 
-CI/CD pipeline (GitHub Actions)
-
-Benefits:
-
-Zero downtime
-
-Easy rollback
-
-Safer production deployments
+### ☁️ Cloud Deployment
+- Deploy to AWS / Azure / GCP
+- Use managed database services (RDS)
+- Implement monitoring using
