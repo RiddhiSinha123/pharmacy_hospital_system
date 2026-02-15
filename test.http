@@ -1,0 +1,21 @@
+### Add Medicine
+POST http://localhost:8080/api/medicine/add
+Content-Type: application/json
+
+{
+  "name": "Paracetamol",
+  "stock": 50,
+  "expiryDate": "2026-05-10",
+  "lowStockLevel": 10
+}
+
+### Sell Medicine
+PUT http://localhost:8080/api/medicine/sell/1?qty=45
+
+
+### Low Stock Alert
+GET http://localhost:8080/api/medicine/low-stock?threshold=10
+
+### Check All Medicines
+GET http://localhost:8080/api/medicine/low-stock?threshold=100
+
