@@ -110,7 +110,7 @@ PUT /api/medicine/sell/1?qty=5
 ⚠️ Low Stock Medicines
 GET /api/medicine/low-stock?threshold=10
 
-🔮 Future Enhancements
+Future Enhancements
 
 User authentication (Admin / Pharmacist roles)
 
@@ -155,7 +155,3 @@ Zero downtime
 Easy rollback
 
 Safer production deployments
-
-👩‍💻 Author
-
-Built as part of backend development learning using Spring Boot.
