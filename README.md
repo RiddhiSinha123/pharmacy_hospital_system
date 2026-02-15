@@ -56,60 +56,6 @@ src
 
 ### 1️⃣ Clone the Repository
 
-```bash
-git clone <your-repository-url>
-cd pharmacy
-
-CREATE DATABASE pharmacy_db;
-
-spring.datasource.url=jdbc:mysql://localhost:3306/pharmacy_db
-spring.datasource.username=root
-spring.datasource.password=your_password
-
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-
-
-4️⃣ Run the Application
-
-From IntelliJ:
-
-Run PharmacyApplication
-
-Or using Maven:
-
-mvn spring-boot:run
-
-
-Application runs at:
-
-http://localhost:8080
-
-📡 API Endpoints
-➕ Add Medicine
-POST /api/medicine/add
-
-
-Body:
-
-{
-  "name": "Paracetamol",
-  "stock": 50,
-  "expiryDate": "2026-05-10",
-  "lowStockLevel": 10
-}
-
-🛒 Sell Medicine
-PUT /api/medicine/sell/{id}?qty=5
-
-
-Example:
-
-PUT /api/medicine/sell/1?qty=5
-
-⚠️ Low Stock Medicines
-GET /api/medicine/low-stock?threshold=10
-
 ## 🔮 Future Enhancements
 
 The current version focuses on basic medicine inventory management.  
@@ -187,4 +133,29 @@ The following improvements are planned for future releases:
 ### ☁️ Cloud Deployment
 - Deploy to AWS / Azure / GCP
 - Use managed database services (RDS)
-- Implement monitoring using
+- Implement monitoring using Prometheus & Grafana
+- Centralized logging
+
+---
+
+### 📱 Frontend Integration
+- React / Angular frontend
+- Admin dashboard UI
+- REST API integration
+- Mobile-friendly UI
+
+---
+
+### 🔔 Notification System
+- Email alerts for low stock
+- SMS alerts for expiry
+- In-app notifications
+
+---
+
+### 🔒 Security Enhancements
+- Input validation
+- Global exception handling
+- API rate limiting
+- HTTPS configuration
+- CORS configuration
