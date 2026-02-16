@@ -15,7 +15,7 @@ public class Medicine {
     private LocalDate expiryDate;
     private int lowStockLevel;
 
-    // Default constructor (required by JPA)
+    // Default constructor
     public Medicine() {
     }
 
@@ -27,9 +27,9 @@ public class Medicine {
         this.lowStockLevel = lowStockLevel;
     }
 
-    // -------------------------
+
     // Business Logic Methods
-    // -------------------------
+
 
     public void reduceStock(int qty) {
         if (qty <= 0) {
@@ -51,9 +51,9 @@ public class Medicine {
         return LocalDate.now().isAfter(this.expiryDate);
     }
 
-    // -------------------------
+
     // Getters and Setters
-    // -------------------------
+
 
     public Long getId() {
         return id;
