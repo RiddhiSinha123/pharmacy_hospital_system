@@ -16,20 +16,20 @@ public class MedicineController {
         this.service = service;
     }
 
-    // 1️⃣ Add Medicine
+    //  Add Medicine
     @PostMapping("/add")
     public Medicine addMedicine(@RequestBody Medicine medicine) {
         return service.addMedicine(medicine);
     }
 
-    // 2️⃣ Sell Medicine
+    //  Sell Medicine
     @PutMapping("/sell/{id}")
     public Medicine sellMedicine(@PathVariable Long id,
                                  @RequestParam int qty) {
         return service.sellMedicine(id, qty);
     }
 
-    // 3️⃣ Low Stock Alert
+    // Low Stock Alert
     @GetMapping("/low-stock")
     public List<Medicine> lowStock(@RequestParam int threshold) {
         return service.getLowStockMedicines(threshold);

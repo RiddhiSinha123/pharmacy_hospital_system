@@ -15,16 +15,16 @@ public class MedicineService {
         this.repository = repository;
     }
 
-    // ==============================
-    // 1️⃣ Add Medicine
-    // ==============================
+
+    // Add Medicine
+
     public Medicine addMedicine(Medicine medicine) {
         return repository.save(medicine);
     }
 
-    // ==============================
-    // 2️⃣ Sell Medicine (Reduce Stock)
-    // ==============================
+
+    //  Sell Medicine (Reduce Stock)
+
     public Medicine sellMedicine(Long id, int qty) {
 
         Medicine medicine = repository.findById(id)
@@ -35,9 +35,9 @@ public class MedicineService {
         return repository.save(medicine);
     }
 
-    // ==============================
-    // 3️⃣ Low Stock Alert
-    // ==============================
+
+    // ️Low Stock Alert
+
     public List<Medicine> getLowStockMedicines(int threshold) {
         return repository.findByStockLessThanEqual(threshold);
     }
