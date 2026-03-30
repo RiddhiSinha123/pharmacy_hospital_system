@@ -1,4 +1,4 @@
-# Stocks ETL Pipeline
+# Stocks ETL Pipeline with Analysis Dashboard
 ### Source: `https://freeapi.app/api/v1/public/stocks`
 
 A production-ready **Extract → Transform → Load** pipeline for the
