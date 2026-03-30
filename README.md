@@ -118,4 +118,5 @@ Or wrap `run()` from `pipeline.py` in Airflow / Prefect / Dagster.
 ## Exit Codes
 - `0` – all records loaded successfully
 - `1` – some records were rejected (check `rejected_*.json`)
+
 - 
